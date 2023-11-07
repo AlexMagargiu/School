@@ -3,17 +3,16 @@ a. să se calculeze suma valorilor tuturor bilelor extrase
 b. să se numere câte bile de valoare pară au fost extrase */
 
 #include <iostream>
-#include <stdlib.h>
-#include <stdio.h>
-#include <time.h>
+#include <cstdlib>
+#include <ctime>
 using namespace std;
 int main()
 {
+  srand(time(0));
   int suma = 0, par = 0;
   int bilaExtrasa = 1;
-  do
+  while (true)
   {
-    srand((unsigned)time(NULL));
     bilaExtrasa = rand() % 50 + 1;
     cout << "Bila extrasa a avut numarul " << bilaExtrasa << endl;
     suma += bilaExtrasa;
@@ -21,7 +20,11 @@ int main()
     {
       par++;
     }
-  } while (bilaExtrasa < 30);
+    if (bilaExtrasa >= 30)
+    {
+      break;
+    }
+  }
   cout << "Suma bilelor extrase este: " << suma << endl;
   cout << "Numarul de bile extrase cu un numar par este: " << par << endl;
   return 0;
