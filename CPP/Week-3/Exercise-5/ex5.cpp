@@ -9,7 +9,7 @@ bool Palindrom(long int num)
 
   while (num > 0)
   {
-    int cifra = num % 10;
+    long int cifra = num % 10;
     numarInversat = numarInversat * 10 + cifra;
     num /= 10;
   }
