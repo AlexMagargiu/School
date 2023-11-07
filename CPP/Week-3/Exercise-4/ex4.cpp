@@ -4,5 +4,7 @@
 using namespace std;
 int main()
 {
-  long int n;
+  int n;
+  cout << "Introduceti un numar pentru n=";
+  cin >> n;
 }
