@@ -4,7 +4,7 @@
 using namespace std;
 int main()
 {
-  long int m = 0, n, cifra;
+  int m = 0, n, cifra;
   cout << "Introduceti numarul natural n=";
   cin >> n;
   while (n > 0)
