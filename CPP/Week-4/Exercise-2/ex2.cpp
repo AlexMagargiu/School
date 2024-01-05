@@ -14,7 +14,6 @@ int main()
   for (int i = 1; i <= n; i++)
   {
     cin >> a[i];
-    sum1 = sum1 + a[i];
   }
   cout << "Introduceti " << m << " valori pentru al doilea sir" << endl;
   for (int i = 1; i <= m; i++)
