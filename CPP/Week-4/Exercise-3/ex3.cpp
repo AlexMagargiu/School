@@ -6,7 +6,7 @@ intregi memorate cu ajutorul vectorilor. Date de intrare: n = 5 a = {1, 2, 5, 7,
 using namespace std;
 int main()
 {
-  int m, n, a[50], b[50];
+  int m, n, a[50], b[50], k = 0, d[50];
   cout << "Introduceti o valoare pentru n: ";
   cin >> n;
   cout << "Introduceti o valoare pentru m: ";
@@ -20,5 +20,22 @@ int main()
   for (int i = 1; i <= m; i++)
   {
     cin >> b[i];
+  }
+  for (int i = 1; i <= n; i++)
+  {
+    for (int j = 1; j <= m; j++)
+    {
+      if (a[i] == b[j])
+      {
+        k++;
+        d[k] = a[i];
+      }
+    }
+  }
+  cout << "k = " << k << endl;
+  cout << "Elementele comune sunt: ";
+  for (int i = 1; i <= k; i++)
+  {
+    cout << d[i] << " ";
   }
 }
