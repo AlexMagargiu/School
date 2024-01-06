@@ -1,3 +1,9 @@
+/* Se considera un vector x = { x1, x2, x3, …, xn }. Sa se scrie un program C++ care sa modifice
+vectorul astfel incat in final sa avem :
+a) x = { x2, x3, …, xn, x1 }
+b) x = { xn, x1, x2, x3, …, xn-1 }
+c) x = { x2, x1, x4, x3,…, xn, xn-1 } */
+
 #include <iostream>
 using namespace std;
 

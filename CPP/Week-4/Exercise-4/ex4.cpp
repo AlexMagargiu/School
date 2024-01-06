@@ -1,3 +1,7 @@
+/* Sa se scrie un program care sa calculeze diferenta a doua multimi de cate n, respectiv m numere
+intregi memorate cu ajutorul vectorilor. Date de intrare: n = 5 a = {1, 2, 5, 7, 12} si m = 4 b = {2, 4,
+8, 12} Date de iesire: se obtine: k = 3 e = {1, 5, 7} */
+
 #include <iostream>
 using namespace std;
 
