@@ -3,13 +3,15 @@ fiecarei coloane si minimul fiecarei linii. */
 
 #include <iostream>
 using namespace std;
+
 int main()
 {
-  int m, n, a[30][30], maxColoana = 0, minLinie = 0;
+  int m, n, a[30][30], maxColoana, minLinie;
   cout << "Introduceti nr de linii: ";
   cin >> n;
   cout << "Introduceti nr de coloane: ";
   cin >> m;
+
   for (int i = 0; i < n; i++)
   {
     for (int j = 0; j < m; j++)
@@ -18,21 +20,30 @@ int main()
       cin >> a[i][j];
     }
   }
+
+  minLinie = maxColoana = a[0][0];
+
   for (int i = 0; i < n; i++)
   {
-    for (int j = 0; j < m; j++)
+    minLinie = a[i][0];
+    for (int j = 1; j < m; j++)
     {
-      if (a[i][j] < a[i + 1][j])
-      {
+      if (a[i][j] < minLinie)
         minLinie = a[i][j];
-      }
-      if (a[i][j] > a[i][j + 1])
-      {
-        maxColoana = a[i][j];
-      }
     }
+    cout << "Minimum liniei " << i << " este: " << minLinie << endl;
   }
-  cout << "Minimum liniei este: " << minLinie;
-  cout << "Maximum coloanei este: " << maxColoana;
+
+  for (int j = 0; j < m; j++)
+  {
+    maxColoana = a[0][j];
+    for (int i = 1; i < n; i++)
+    {
+      if (a[i][j] > maxColoana)
+        maxColoana = a[i][j];
+    }
+    cout << "Maximum coloanei " << j << " este: " << maxColoana << endl;
+  }
+
   return 0;
 }
