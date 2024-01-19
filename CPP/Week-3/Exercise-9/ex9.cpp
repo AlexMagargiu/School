@@ -4,29 +4,38 @@ b. să se numere câte bile de valoare pară au fost extrase */
 
 #include <iostream>
 #include <cstdlib>
-#include <ctime>
+#include <time.h>
 using namespace std;
+
 int main()
 {
-  srand(time(0));
-  int suma = 0, par = 0;
-  int bilaExtrasa = 1;
+  int suma = 0;
+  int bileExtrase = 0;
+  int bilePare = 0;
+  srand(time(NULL));
+
   while (true)
   {
-    bilaExtrasa = rand() % 50 + 1;
-    cout << "Bila extrasa a avut numarul " << bilaExtrasa << endl;
-    suma += bilaExtrasa;
-    if (bilaExtrasa % 2 == 0)
+    int valoareBila = rand() % 50 + 1;
+    cout << "A fost extrasa bila cu valoarea: " << valoareBila << endl;
+    suma += valoareBila;
+    if (valoareBila < 30)
     {
-      par++;
+      bileExtrase++;
+      if (valoareBila % 2 == 0)
+      {
+        bilePare++;
+      }
     }
-    if (bilaExtrasa >= 30)
+    else
     {
       break;
     }
   }
-  cout << "Suma bilelor extrase este: " << suma << endl;
-  cout << "Numarul de bile extrase cu un numar par este: " << par << endl;
+
+  cout << "\nSuma valorilor tuturor bilelor extrase: " << suma << endl;
+  cout << "Numarul total de bile extrase: " << bileExtrase << endl;
+  cout << "Numarul de bile pare extrase: " << bilePare << endl;
+
   return 0;
-  // Nu merge
 }
