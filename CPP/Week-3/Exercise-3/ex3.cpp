@@ -5,4 +5,37 @@ using namespace std;
 int main()
 {
   int n;
+  cout << "Introduceti valoarea pentru n:";
+  cin >> n;
+
+  for (int i = 1; i < n; i++)
+  {
+    int sum1 = 0;
+    for (int divizor = 1; divizor < i; divizor++)
+    {
+      if (i % divizor == 0)
+      {
+        sum1 += divizor;
+      }
+    }
+
+    for (int j = i + 1; j < n; j++)
+    {
+      int sum2 = 0;
+      for (int divizor = 1; divizor < j; divizor++)
+      {
+        if (j % divizor == 0)
+        {
+          sum2 += divizor;
+        }
+      }
+
+      if (sum1 == j && sum2 == i)
+      {
+        cout << i << " și " << j << " sunt prietene." << endl;
+      }
+    }
+  }
+
+  return 0;
 }
