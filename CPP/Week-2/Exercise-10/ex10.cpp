@@ -6,20 +6,13 @@ s=(1-2) + (3-4) + ... + ((2k-1) – (2k)) + (2k+1) = -k + 2k+1= -n/2 + n, daca n
 
 #include <iostream>
 using namespace std;
+
 int main()
 {
-  int n, s = 0;
-  cout << "Introduceti o valoare pentru n: " << endl;
+  int n, sum = 0;
+  cout << "Introduceti valoarea pentru n: ";
   cin >> n;
-  if (n % 2 == 0)
-  {
-    s = -n / 2;
-  }
-  else
-  {
-    s = -n / 2 + 1;
-  }
-  cout << "Suma pentru n= " << n << " este " << s << endl;
+  (n % 2 == 0) ? sum = -n / 2 : sum = -n / 2 + n;
+  cout << "Suma este: " << sum;
   return 0;
-  // Nu e corect
 }
